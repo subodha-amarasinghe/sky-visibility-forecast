@@ -4,6 +4,7 @@
 # backend
 backend/.env
 backend/node_modules
+backend/package-lock.json
 
 
 #react-native gitignore file is available in the "react-native" folder
