@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "6cfb3b10-edb5-4672-84e3-bbca0391b6b4",
+		"name": "sky-visibility-forecast",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"John\",\n    \"lastname\": \"Doe\",\n    \"email\": \"john@test.xyz\",\n    \"username\": \"john\",\n    \"password\": \"john123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"john\",\n    \"password\": \"john123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get favourite city list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/favourites/{{user_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"favourites",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get weather Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/weather/{{city_name}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"weather",
+						"{{city_name}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add to favourite city list ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cityName\" : \"Kandy\",\n    \"temperature\": 112,\n    \"clouds\": 48,\n    \"userId\": \"{{user_id}}\",\n    \"icon\": \"04d\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/favourites  ",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"favourites  "
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
