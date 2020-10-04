@@ -3,6 +3,6 @@ services:
   svf_backend_node:
     build: .
     ports:
-      - "4000:4000"
+      - "80:4000"
   svf_database_mongo:
     image: "mongo:latest"
