@@ -1,8 +1,8 @@
-## Start athe backend service with docker
+## Start the back end service with docker
 
-Start application with `docker-compose up`
+Start NodeJs server using docker-compose `docker-compose up`
 
-Service will start in port `4000`
+Service will be start in port `:4000`
 
 
 
@@ -11,6 +11,8 @@ Service will start in port `4000`
 Navigate to the `react-native` directory 
 
 run `npm install` command to install dependencies.
+
+replace `API_URL` in the file `/config.js` with up and running server's host
 
 ### Run android app
 `react-native run-android`

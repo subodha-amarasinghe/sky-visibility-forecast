@@ -1,3 +1,6 @@
+#repo
+!debug.log
+
 # backend
 backend/.env
 backend/node_modules
