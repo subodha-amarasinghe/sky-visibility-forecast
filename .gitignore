@@ -1,0 +1,6 @@
+# backend
+backend/.env
+backend/node_modules
+
+
+#react-native gitignore file is available in the "react-native" folder
